@@ -5,6 +5,16 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comercio-web", "comercio-web\comercio-web.csproj", "{950E1AB9-C3C5-4771-861F-7E135BFA1741}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z-negocio", "..\..\Curso C# Nivel 3\ejemplo-pokedex-web\z-negocio\z-negocio.csproj", "{E095F733-8A06-40F0-8711-55F8579C61AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "z-dominio", "..\..\Curso C# Nivel 3\ejemplo-pokedex-web\z-dominio\z-dominio.csproj", "{9B35E911-24C9-4C9B-85F7-AFE76D6794D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pokedex-web", "..\..\Curso C# Nivel 3\ejemplo-pokedex-web\pokedex-web\pokedex-web.csproj", "{24A40EF5-0F0E-4DF7-A38A-5CEDD8C49FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.csproj", "{3E2C5E2E-E430-48D8-846D-C5C49B2520A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{9F421E10-3A6D-48CC-8E72-D35AAFA7D77E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +25,26 @@ Global
 		{950E1AB9-C3C5-4771-861F-7E135BFA1741}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{950E1AB9-C3C5-4771-861F-7E135BFA1741}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{950E1AB9-C3C5-4771-861F-7E135BFA1741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E095F733-8A06-40F0-8711-55F8579C61AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E095F733-8A06-40F0-8711-55F8579C61AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E095F733-8A06-40F0-8711-55F8579C61AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E095F733-8A06-40F0-8711-55F8579C61AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B35E911-24C9-4C9B-85F7-AFE76D6794D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B35E911-24C9-4C9B-85F7-AFE76D6794D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B35E911-24C9-4C9B-85F7-AFE76D6794D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B35E911-24C9-4C9B-85F7-AFE76D6794D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A40EF5-0F0E-4DF7-A38A-5CEDD8C49FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A40EF5-0F0E-4DF7-A38A-5CEDD8C49FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A40EF5-0F0E-4DF7-A38A-5CEDD8C49FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A40EF5-0F0E-4DF7-A38A-5CEDD8C49FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E2C5E2E-E430-48D8-846D-C5C49B2520A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E2C5E2E-E430-48D8-846D-C5C49B2520A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E2C5E2E-E430-48D8-846D-C5C49B2520A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E2C5E2E-E430-48D8-846D-C5C49B2520A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F421E10-3A6D-48CC-8E72-D35AAFA7D77E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F421E10-3A6D-48CC-8E72-D35AAFA7D77E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F421E10-3A6D-48CC-8E72-D35AAFA7D77E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F421E10-3A6D-48CC-8E72-D35AAFA7D77E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
