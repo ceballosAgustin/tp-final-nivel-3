@@ -13,5 +13,10 @@ namespace comercio_web
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

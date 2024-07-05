@@ -11,7 +11,7 @@
     </asp:ContentPlaceHolder>
     <style>
         body {
-            background-color: lightgray;
+            background-color: #efefef;
         }
 
         .iniciar-sesion {
@@ -28,6 +28,10 @@
             font-weight: bold;
             font-size: 16px;
             color: #000;
+        }
+
+        .navbar-nav .nav-item .nav-link {
+            margin-right: 15px;
         }
 
     </style>
@@ -47,10 +51,10 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link iniciar-sesion" aria-current="page" href="#">Iniciar Sesión</a>
+                                <a class="nav-link iniciar-sesion" aria-current="page" href="Default.aspx">Iniciar Sesión</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link registrarse" href="#">Registrarse</a>
+                                <a class="nav-link registrarse" href="Registro.aspx">Registrarse</a>
                             </li>
                         </ul>
                     </div>
