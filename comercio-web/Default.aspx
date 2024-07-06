@@ -50,7 +50,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">E-mail</label>
-                <asp:TextBox runat="server" CssClass="form-control" required ID="txtEmail" placeholder="jgomez@gmail.com" />
+                <asp:TextBox runat="server" type="email" CssClass="form-control" required ID="txtEmail" placeholder="jgomez@gmail.com" />
             </div>
             <div class="mb-3">
                 <label class="form-label">Contraseña</label>
