@@ -57,6 +57,12 @@
             margin-left: 30px;
         }
 
+        .lista-articulos {
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+        }
+
         .perfil {
             font-weight: bold;
             font-size: 16px;
@@ -66,12 +72,9 @@
         .favoritos {
             font-weight: bold;
             font-size: 16px;
-            color: #FF3131;
+            color: #000;
         }
 
-            .favoritos:hover {
-                color: darkred;
-            }
     </style>
 </head>
 <body>
@@ -102,9 +105,15 @@
                     { %>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link articulos" href="Articulo.aspx">
+                        <a class="nav-link articulos" href="Articulos.aspx">
                             <img src="Images/articulos.png" alt="articulos" width="20" height="20" />
                             Articulos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lista-articulos" href="ListaArticulos.aspx">
+                            <img src="Images/lista-articulos.png" alt="lista-articulos" width="20" height="20" />
+                            Lista Articulos
                         </a>
                     </li>
                     <li class="nav-item">
@@ -115,7 +124,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link favoritos" href="MisFavoritos.aspx">
-                            <img src="Images/favorito.png" alt="favoritos" width="20" height="20" />
+                            <img src="Images/favoritos.png" alt="favoritos" width="20" height="20" />
                             Mis Favoritos
                         </a>
                     </li>

@@ -31,7 +31,7 @@ namespace comercio_web
                 user.Id = negocio.insertarNuevo(user);
                 Session.Add("user", user);
 
-                Response.Redirect("Home.aspx", false);
+                Response.Redirect("Articulos.aspx", false);
             }
             catch (Exception ex)
             {

@@ -35,7 +35,7 @@ namespace comercio_web
                 if (negocio.Login(user))
                 {
                     Session.Add("user", user);
-                    Response.Redirect("Home.aspx", false);
+                    Response.Redirect("Articulos.aspx", false);
                 }
                 else
                 {
