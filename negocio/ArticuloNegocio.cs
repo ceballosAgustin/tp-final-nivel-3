@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,11 +42,16 @@ namespace negocio
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     }
 
+                    aux.Precio = (SqlMoney)datos.Lector["Precio"];
+
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+                  
 
                     aux.Categoria = new Categoria();
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
                     lista.Add(aux);
 
@@ -86,11 +92,16 @@ namespace negocio
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     }
 
+                    aux.Precio = (SqlMoney)datos.Lector["Precio"];
+
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
+
 
                     aux.Categoria = new Categoria();
                     aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
                     lista.Add(aux);
 

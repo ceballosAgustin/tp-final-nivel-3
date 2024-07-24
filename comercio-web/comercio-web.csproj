@@ -76,6 +76,7 @@
     <Content Include="Images\lista-articulos.png" />
     <Content Include="Images\logout.png" />
     <Content Include="Images\user.png" />
+    <Content Include="ListaArticulos.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -100,6 +101,13 @@
     </Compile>
     <Compile Include="Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListaArticulos.aspx.cs">
+      <DependentUpon>ListaArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListaArticulos.aspx.designer.cs">
+      <DependentUpon>ListaArticulos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master.Master.cs">
       <DependentUpon>Master.Master</DependentUpon>
