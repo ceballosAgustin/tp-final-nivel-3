@@ -34,22 +34,44 @@ namespace comercio_web
 
         protected void txtFiltro_TextChanged(object sender, EventArgs e)
         {
+            List<Articulo> lista = (List<Articulo>)Session["listaArticulos"];
+            List<Articulo> listaFiltrada = lista.FindAll(x => x.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()));
 
+            dgvArticulos.DataSource = listaFiltrada;
+            dgvArticulos.DataBind();
         }
 
         protected void chkAvanzado_CheckedChanged(object sender, EventArgs e)
         {
+            FiltroAvanzado = chkAvanzado.Checked;
+            txtFiltro.Enabled = !FiltroAvanzado;
+            btnReiniciarLista.Enabled = !FiltroAvanzado;
 
+            CargarCriterios();
         }
 
         protected void ddlCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            CargarCriterios();
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
 
+                dgvArticulos.DataSource = negocio.filtrar(ddlCampo.SelectedItem.ToString(),
+                                                          ddlCriterio.SelectedItem.ToString(),
+                                                          txtFiltroAvanzado.Text);
+
+                dgvArticulos.DataBind();
+            }
+            catch (Exception ex)
+            {
+
+                Session.Add("Error", ex);
+            }
         }
 
         protected void dgvArticulos_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,5 +83,53 @@ namespace comercio_web
         {
 
         }
+
+        protected void btnReiniciar_Click(object sender, EventArgs e)
+        {
+            // Reinicio valores del filtro avanzado
+            ddlCampo.SelectedIndex = 0;
+            ddlCriterio.Items.Clear();
+            txtFiltroAvanzado.Text = string.Empty;
+
+            CargarCriterios();
+
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            Session.Add("listaArticulos", negocio.listarConSP());
+            dgvArticulos.DataSource = Session["listaArticulos"];
+            dgvArticulos.DataBind();
+        }
+        protected void btnReiniciarLista_Click(object sender, EventArgs e)
+        {
+            txtFiltroAvanzado.Text = string.Empty;
+
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
+            Session.Add("listaArticulos", negocio.listarConSP());
+            dgvArticulos.DataSource = Session["listaArticulos"];
+            dgvArticulos.DataBind();
+        }
+
+        protected void CargarCriterios()
+        {
+            ddlCriterio.Items.Clear();
+
+            if (ddlCampo.SelectedItem != null)
+            {
+                if (ddlCampo.SelectedItem.ToString() == "Precio")
+                {
+                    ddlCriterio.Items.Add("Igual a");
+                    ddlCriterio.Items.Add("Mayor a");
+                    ddlCriterio.Items.Add("Menor a");
+                }
+                else
+                {
+                    ddlCriterio.Items.Add("Contiene");
+                    ddlCriterio.Items.Add("Comienza con");
+                    ddlCriterio.Items.Add("Termina");
+                }
+            }
+        }
+
     }
 }
