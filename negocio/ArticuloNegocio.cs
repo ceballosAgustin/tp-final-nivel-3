@@ -42,7 +42,7 @@ namespace negocio
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     }
 
-                    aux.Precio = (SqlMoney)datos.Lector["Precio"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
 
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
@@ -92,7 +92,7 @@ namespace negocio
                         aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
                     }
 
-                    aux.Precio = (SqlMoney)datos.Lector["Precio"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
 
                     aux.Marca = new Marca();
                     aux.Marca.Id = (int)datos.Lector["IdMarca"];
