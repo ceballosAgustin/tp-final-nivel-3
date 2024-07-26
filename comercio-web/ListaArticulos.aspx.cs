@@ -81,7 +81,9 @@ namespace comercio_web
 
         protected void dgvArticulos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-
+            dgvArticulos.DataSource = Session["listaArticulos"];
+            dgvArticulos.PageIndex = e.NewPageIndex;
+            dgvArticulos.DataBind();
         }
 
         protected void btnReiniciar_Click(object sender, EventArgs e)
@@ -101,7 +103,7 @@ namespace comercio_web
         }
         protected void btnReiniciarLista_Click(object sender, EventArgs e)
         {
-            txtFiltroAvanzado.Text = string.Empty;
+            txtFiltro.Text = string.Empty;
 
             ArticuloNegocio negocio = new ArticuloNegocio();
 

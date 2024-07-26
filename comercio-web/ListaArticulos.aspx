@@ -70,7 +70,7 @@
                             OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged">
                             <asp:ListItem Text="Nombre" />
                             <asp:ListItem Text="Marca" />
-                            <asp:ListItem Text="Categoria" />
+                            <asp:ListItem Text="Categoría" />
                             <asp:ListItem Text="Precio" />
                         </asp:DropDownList>
                     </div>
@@ -106,7 +106,7 @@
                 <Columns>
                     <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                     <asp:BoundField HeaderText="Marca" DataField="Marca.Descripcion" />
-                    <asp:BoundField HeaderText="Categoria" DataField="Categoria.Descripcion" />
+                    <asp:BoundField HeaderText="Categoría" DataField="Categoria.Descripcion" />
                     <asp:BoundField HeaderText="Precio" DataField="Precio" />
                     <asp:CommandField HeaderText="Acciones (clickear)" ShowSelectButton="true" SelectText="⚙️" />
                 </Columns>
@@ -114,6 +114,6 @@
         </asp:Panel>
     </div>
     <div class="agregar-articulo">
-        <a href="AgregarArticulo.aspx" class="btn btn-danger">Agregar Artículo</a>
+        <a href="FormularioArticulo.aspx" class="btn btn-danger">Agregar Artículo</a>
     </div>
 </asp:Content>
