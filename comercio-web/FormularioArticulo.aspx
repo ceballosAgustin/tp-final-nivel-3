@@ -54,6 +54,10 @@
                 <label for="ddlCategoria" class="form-label">Categoría</label>
                 <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-select"></asp:DropDownList>
             </div>
+            <div>
+                <label for="txtPrecio" class="form-label">Precio</label>
+                <asp:TextBox runat="server" id="txtPrecio" CssClass="form-control"/>
+            </div>
         </div>
         <div class="col-6">
             <asp:UpdatePanel runat="server">
