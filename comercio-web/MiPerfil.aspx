@@ -41,11 +41,6 @@
                     <label class="form-label">Apellidos</label>
                     <asp:TextBox runat="server" CssClass="form-control" ID="txtApellido" />
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Fecha de Nacimiento</label>
-                    <asp:TextBox runat="server" CssClass="form-control" TextMode="Date"
-                        ID="txtFechaNacimiento" />
-                </div>
             </div>
             <div class="col-md-4">
                 <div class="mb-3">
