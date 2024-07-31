@@ -29,7 +29,7 @@ namespace comercio_web
 
                     if (!string.IsNullOrEmpty(user.UrlImagenPerfil))
                     {
-                        imgAvatar.ImageUrl = "~/Images/" + user.UrlImagenPerfil;
+                        imgAvatar.ImageUrl = "~/ProfileImages/" + user.UrlImagenPerfil;
                     }
                 }
             }

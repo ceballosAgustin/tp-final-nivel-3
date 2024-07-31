@@ -45,17 +45,17 @@
             <div class="col-md-4">
                 <div class="mb-3">
                     <label class="form-label">Foto de Perfil</label>
-                    <input type="file" id="txtImagen" runat="server" class="form-control" />
+                    <input type="file" id="txtImagen" runat="server" class="form-control" accept=".jpg,.jpeg,.png,.gif" />
                 </div>
                 <asp:Image ImageUrl="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
                     runat="server" ID="imgNuevoPerfil" CssClass="img-fluid mb-3" />
             </div>
         </div>
-        <div class="row mt-3">
-            <div class="col-md-4">
-                <asp:Button Text="Guardar" CssClass="btn btn-danger" ID="btnGuardar"
-                    OnClick="btnGuardar_Click" runat="server" />
-            </div>
-        </div>
     </asp:Panel>
+    <div class="row mt-3">
+        <div class="col-md-4">
+            <asp:Button Text="Guardar" CssClass="btn btn-danger" ID="btnGuardar"
+                OnClick="btnGuardar_Click" runat="server" />
+        </div>
+    </div>
 </asp:Content>
