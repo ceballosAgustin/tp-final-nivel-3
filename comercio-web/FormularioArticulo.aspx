@@ -99,7 +99,7 @@
                             CssClass="btn btn-outline-danger" OnClick="btnEliminar_Click" />
                         <%if (ConfirmaEliminacion)
                             { %>
-                        <div class="mb-3">
+                        <div class="mb-3 mt-3">
                             <asp:CheckBox Text="Confirmar Eliminación" runat="server"
                                 ID="chkConfirmaEliminacion" />
                             <asp:Button Text="Eliminar" runat="server"
