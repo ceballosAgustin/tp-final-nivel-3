@@ -123,14 +123,16 @@ namespace comercio_web
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
             ConfirmaEliminacion = true;
+
         }
 
         protected void btnConfirmaEliminar_Click(object sender, EventArgs e)
         {
             try
             {
-                if (chkConfirmaEliminacion.Checked)
+                if (chkConfirmaEliminacion.Checked && Request.QueryString["id"] != null)
                 {
+                    btnConfirmaEliminar.Enabled = true;
                     ArticuloNegocio negocio = new ArticuloNegocio();
                     negocio.eliminar(int.Parse(txtId.Text));
                     Response.Redirect("ListaArticulos.aspx", false);
