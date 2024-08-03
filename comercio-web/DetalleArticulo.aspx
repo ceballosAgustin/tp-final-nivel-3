@@ -86,11 +86,8 @@
                 <div class="col-md-6">
                     <asp:UpdatePanel runat="server">
                         <ContentTemplate>
-                            <div class="mb-3">
-                                <asp:TextBox runat="server" ID="txtImagenUrl" CssClass="form-control"
-                                    AutoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged" ReadOnly="true" Visible="false" />
-                            </div>
-                            <asp:Image runat="server" ID="imgArticulo" CssClass="img-limited img-fluid" />
+                            <asp:Image runat="server" onerror="this.src='https://www.svgrepo.com/show/508699/landscape-placeholder.svg'" 
+                                ID="imgArticulo" CssClass="img-limited img-fluid" />
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>

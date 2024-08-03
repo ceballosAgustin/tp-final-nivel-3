@@ -17,7 +17,7 @@ namespace comercio_web
             {
                 string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
 
-                if(id != "" && !IsPostBack)
+                if (id != "" && !IsPostBack)
                 {
                     ArticuloNegocio negocio = new ArticuloNegocio();
                     Articulo seleccionado = (negocio.listar(id))[0];
@@ -28,8 +28,8 @@ namespace comercio_web
                     txtMarca.Text = seleccionado.Marca.Descripcion;
                     txtCategoria.Text = seleccionado.Categoria.Descripcion;
                     txtPrecio.Text = seleccionado.Precio.ToString();
-                    txtImagenUrl.Text = seleccionado.ImagenUrl;
-                    txtImagenUrl_TextChanged(sender, e);
+                    imgArticulo.ImageUrl = seleccionado.ImagenUrl;
+                    imgArticulo.DataBind();
 
                 }
 
@@ -39,8 +39,6 @@ namespace comercio_web
                 txtMarca.Enabled = false;
                 txtCategoria.Enabled = false;
                 txtPrecio.Enabled = false;
-                txtImagenUrl.Enabled = false;
-                txtImagenUrl.Visible = false;
             }
             catch (Exception ex)
             {
@@ -55,9 +53,5 @@ namespace comercio_web
             Response.Redirect("Articulos.aspx");
         }
 
-        protected void txtImagenUrl_TextChanged(object sender, EventArgs e)
-        {
-            imgArticulo.ImageUrl = txtImagenUrl.Text;
-        }
     }
 }
