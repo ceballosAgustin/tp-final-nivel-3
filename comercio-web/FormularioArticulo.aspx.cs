@@ -15,6 +15,12 @@ namespace comercio_web
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Seguridad.esAdmin(Session["user"]))
+            {
+                Session.Add("error", "Se requieren permisos de admin para acceder a este apartado.");
+                Response.Redirect("Error.aspx", false);
+            }
+            
             txtId.Enabled = false;
             ConfirmaEliminacion = false;
 
