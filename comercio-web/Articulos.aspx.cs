@@ -28,7 +28,8 @@ namespace comercio_web
 
         protected void btnDetalle_Click(object sender, EventArgs e)
         {
-
+            string id = ((Button)sender).CommandArgument;
+            Response.Redirect("DetalleArticulo.aspx?id=" + id);
         }
     }
 }
