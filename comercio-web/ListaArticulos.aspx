@@ -56,7 +56,7 @@
                             OnCheckedChanged="chkAvanzado_CheckedChanged" />
                     </div>
                     <asp:Button Text="Reiniciar Lista" runat="server" CssClass="btn btn-danger btn-reiniciar"
-                        ID="btnReiniciarLista" onclick="btnReiniciarLista_Click" />
+                        ID="btnReiniciarLista" OnClick="btnReiniciarLista_Click" />
                 </div>
             </div>
 
@@ -102,12 +102,16 @@
                 CssClass="table" AutoGenerateColumns="false"
                 OnSelectedIndexChanged="dgvArticulos_SelectedIndexChanged"
                 OnPageIndexChanging="dgvArticulos_PageIndexChanging"
-                AllowPaging="true" PageSize="5">
+                AllowPaging="true" PageSize="7">
                 <Columns>
                     <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                     <asp:BoundField HeaderText="Marca" DataField="Marca.Descripcion" />
                     <asp:BoundField HeaderText="Categoría" DataField="Categoria.Descripcion" />
-                    <asp:BoundField HeaderText="Precio" DataField="Precio" />
+                    <asp:TemplateField HeaderText="Precio">
+                        <ItemTemplate>
+                            $<%# string.Format("{0:N2}", Eval("Precio")) %>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                     <asp:CommandField HeaderText="Acciones (clickear)" ShowSelectButton="true" SelectText="⚙️" />
                 </Columns>
             </asp:GridView>

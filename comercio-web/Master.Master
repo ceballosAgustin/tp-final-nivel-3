@@ -74,7 +74,6 @@
             font-size: 16px;
             color: #000;
         }
-
     </style>
 </head>
 <body>
@@ -110,12 +109,15 @@
                             Articulos
                         </a>
                     </li>
+                    <%if (negocio.Seguridad.esAdmin(Session["user"]))
+                        { %>
                     <li class="nav-item">
                         <a class="nav-link lista-articulos" href="ListaArticulos.aspx">
                             <img src="Images/lista-articulos.png" alt="lista-articulos" width="20" height="20" />
                             Lista Articulos
                         </a>
                     </li>
+                    <%} %>
                     <li class="nav-item">
                         <a class="nav-link perfil" href="MiPerfil.aspx">
                             <img src="Images/user.png" alt="usuario" width="20" height="20" />

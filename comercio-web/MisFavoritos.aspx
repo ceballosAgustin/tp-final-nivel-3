@@ -45,7 +45,8 @@
                                 onerror="this.src='https://www.svgrepo.com/show/508699/landscape-placeholder.svg'" alt="..." />
                             <div class="card-body">
                                 <h5 class="card-title"><%#Eval("Nombre") %></h5>
-                                <p class="card-text"><%#Eval("Precio") %></p>
+                                <p class="card-text">Precio: $<%# string.Format("{0:N2}", Eval("Precio")) %></p>
+                                <p class="card-text"><%#Eval("Descripcion") %></p>
                                 <asp:Button Text="Eliminar de Favoritos" ID="btnEliminar" runat="server" CssClass="btn btn-danger"
                                     CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnEliminar_Click" />
                             </div>

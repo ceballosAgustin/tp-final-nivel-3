@@ -70,7 +70,7 @@
                 </div>
                 <div>
                     <label for="txtPrecio" class="form-label">Precio</label>
-                    <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" TextMode="Number" />
                     <asp:Label runat="server" ID="lblErrorPrecio" CssClass="text-danger" Visible="false" />
                 </div>
             </div>
