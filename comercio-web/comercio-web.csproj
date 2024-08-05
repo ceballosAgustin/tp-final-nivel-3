@@ -73,13 +73,16 @@
     <Content Include="Error.aspx" />
     <Content Include="FormularioArticulo.aspx" />
     <Content Include="Images\articulos.png" />
+    <Content Include="Images\favorito.png" />
     <Content Include="Images\favoritos.png" />
     <Content Include="Images\HADESTOCK.png" />
+    <Content Include="Images\in-favorito.png" />
     <Content Include="Images\lista-articulos.png" />
     <Content Include="Images\logout.png" />
     <Content Include="Images\user.png" />
     <Content Include="ListaArticulos.aspx" />
     <Content Include="MiPerfil.aspx" />
+    <Content Include="MisFavoritos.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -139,6 +142,13 @@
     </Compile>
     <Compile Include="MiPerfil.aspx.designer.cs">
       <DependentUpon>MiPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MisFavoritos.aspx.cs">
+      <DependentUpon>MisFavoritos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisFavoritos.aspx.designer.cs">
+      <DependentUpon>MisFavoritos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.aspx.cs">
