@@ -23,10 +23,15 @@ namespace comercio_web
 
             try
             {
-                if(Validacion.validaTextoVacio(txtEmail) || Validacion.validaTextoVacio(txtPassword))
+                bool hayError = false;
+
+                hayError |= Validacion.validaTextoVacio(txtEmail, lblErrorEmail, "❗ Debes ingresar tu E-mail");
+                hayError |= Validacion.validaTextoVacio(txtPassword, lblErrorPass, "❗ Debes ingresar tu contraseña");
+
+                if(hayError)
                 {
-                    Session.Add("error", "Debes completar ambos campos...");
-                    Response.Redirect("Error.aspx");
+                    // Si hay un error, no sigue el método
+                    return;
                 }
 
                 user.Email = txtEmail.Text;

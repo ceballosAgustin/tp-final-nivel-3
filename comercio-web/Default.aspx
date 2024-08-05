@@ -38,6 +38,11 @@
         .btn-login {
             width: 100%;
         }
+
+        .text-danger {
+            font-weight: bold;
+            font-size: 16px;
+        }
     </style>
 </asp:Content>
 
@@ -51,10 +56,12 @@
             <div class="mb-3">
                 <label class="form-label">E-mail</label>
                 <asp:TextBox runat="server" type="email" CssClass="form-control" required ID="txtEmail" placeholder="jgomez@gmail.com" />
+                <asp:Label runat="server" ID="lblErrorEmail" CssClass="text-danger" Visible="false" />
             </div>
             <div class="mb-3">
                 <label class="form-label">Contraseña</label>
                 <asp:TextBox runat="server" type="password" CssClass="form-control" required ID="txtPassword" placeholder="••••••••••" />
+                <asp:Label runat="server" ID="lblErrorPass" CssClass="text-danger" Visible="false" />
             </div>
             <p>¿No tienes una cuenta? <a href="Registro.aspx">Regístrate</a></p>
             <asp:Button type="submit" CssClass="btn btn-danger btn-login" Text="Iniciar Sesión" ID="btnLogin" OnClick="btnLogin_Click" runat="server" />

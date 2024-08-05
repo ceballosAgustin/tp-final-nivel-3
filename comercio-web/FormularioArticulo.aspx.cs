@@ -87,6 +87,17 @@ namespace comercio_web
 
             try
             {
+                bool hayError = false;
+
+                hayError |= Validacion.validaTextoVacio(txtCodigo, lblErrorCodigo, "❗ Debes ingresar un código");
+                hayError |= Validacion.validaTextoVacio(txtNombre, lblErrorNombre, "❗ Debes ingresar un nombre");
+                hayError |= Validacion.validaTextoVacio(txtPrecio, lblErrorPrecio, "❗ Debes ingresar un precio");
+
+                if (hayError)
+                {
+                    return;
+                }
+
                 nuevo.Codigo = txtCodigo.Text;
                 nuevo.Nombre = txtNombre.Text;
                 nuevo.Descripcion = txtDescripcion.Text;
@@ -115,9 +126,9 @@ namespace comercio_web
             }
             catch (Exception ex)
             {
-                throw ex;
-                //Session.Add("error", ex);
-                //Response.Redirect("Error.aspx", false);
+
+                Session.Add("error", ex);
+                Response.Redirect("Error.aspx", false);
             }
         }
 

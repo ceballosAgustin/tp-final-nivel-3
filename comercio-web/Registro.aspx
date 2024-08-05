@@ -35,6 +35,11 @@
             margin-bottom: 20px;
         }
 
+        .text-danger {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
         .btn-registro {
             width: 100%;
         }
@@ -50,18 +55,22 @@
             <div class="mb-3">
                 <label class="form-label">Nombres</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtNombre" placeholder="José" required />
+                <asp:Label runat="server" ID="lblErrorNombre" CssClass="text-danger" Visible="false" />
             </div>
             <div class="mb-3">
                 <label class="form-label">Apellidos</label>
                 <asp:TextBox type="" runat="server" CssClass="form-control" ID="txtApellido" placeholder="Gómez" required />
+                <asp:Label runat="server" ID="lblErrorApellido" CssClass="text-danger" Visible="false" />
             </div>
             <div class="mb-3">
                 <label class="form-label">E-mail</label>
                 <asp:TextBox runat="server" type="email" CssClass="form-control" ID="txtEmail" placeholder="jgomez@gmail.com" required />
+                <asp:Label runat="server" ID="lblErrorEmail" CssClass="text-danger" Visible="false" />
             </div>
             <div class="mb-3">
                 <label class="form-label">Contraseña</label>
                 <asp:TextBox runat="server" type="password" CssClass="form-control" ID="txtPassword" placeholder="••••••••••" required />
+                <asp:Label runat="server" ID="lblErrorPass" CssClass="text-danger" Visible="false" />
             </div>
             <p>¿Ya tienes una cuenta? <a href="Default.aspx">Iniciar Sesión</a></p>
             <asp:Button type="submit" CssClass="btn btn-danger btn-registro" Text="Regístrarme" ID="btnRegistro" OnClick="btnRegistro_Click" runat="server" />

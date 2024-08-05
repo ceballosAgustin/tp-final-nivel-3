@@ -18,6 +18,11 @@
                 color: #444;
                 text-align: left;
             }
+
+            .text-danger {
+                font-weight: bold;
+                font-size: 16px;
+            }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -36,10 +41,12 @@
                 <div class="mb-3">
                     <label class="form-label">Nombres</label>
                     <asp:TextBox runat="server" CssClass="form-control" ID="txtNombre" />
+                    <asp:Label runat="server" ID="lblErrorNombre" CssClass="text-danger" Visible="false" />
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Apellidos</label>
                     <asp:TextBox runat="server" CssClass="form-control" ID="txtApellido" />
+                    <asp:Label runat="server" ID="lblErrorApellido" CssClass="text-danger" Visible="false" />
                 </div>
             </div>
             <div class="col-md-4">

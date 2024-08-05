@@ -23,6 +23,18 @@ namespace comercio_web
                 User user = new User();
                 UserNegocio negocio = new UserNegocio();
 
+                bool hayError = false;
+
+                hayError |= Validacion.validaTextoVacio(txtNombre, lblErrorNombre, "❗ Debes ingresar tu nombre");
+                hayError |= Validacion.validaTextoVacio(txtApellido, lblErrorApellido, "❗ Debes ingresar tu apellido");
+                hayError |= Validacion.validaTextoVacio(txtEmail, lblErrorEmail, "❗ Debes ingresar tu E-mail");
+                hayError |= Validacion.validaTextoVacio(txtPassword, lblErrorPass, "❗ Debes ingresar tu contraseña");
+
+                if (hayError)
+                {
+                    return;
+                }
+
                 user.Nombre = txtNombre.Text;
                 user.Apellido = txtApellido.Text;
                 user.Email = txtEmail.Text;

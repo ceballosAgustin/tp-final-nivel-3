@@ -30,6 +30,11 @@
             max-height: 400px;
             object-fit: contain;
         }
+
+        .text-danger {
+            font-weight: bold;
+            font-size: 16px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -48,10 +53,12 @@
                 <div class="mb-3">
                     <label for="txtCodigo" class="form-label">Código</label>
                     <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control" />
+                    <asp:Label runat="server" ID="lblErrorCodigo" CssClass="text-danger" Visible="false" />
                 </div>
                 <div class="mb-3">
                     <label for="txtNombre" class="form-label">Nombre</label>
                     <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" />
+                    <asp:Label runat="server" ID="lblErrorNombre" CssClass="text-danger" Visible="false" />
                 </div>
                 <div class="mb-3">
                     <label for="ddlMarca" class="form-label">Marca</label>
@@ -64,6 +71,7 @@
                 <div>
                     <label for="txtPrecio" class="form-label">Precio</label>
                     <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" />
+                    <asp:Label runat="server" ID="lblErrorPrecio" CssClass="text-danger" Visible="false" />
                 </div>
             </div>
             <div class="col-6">

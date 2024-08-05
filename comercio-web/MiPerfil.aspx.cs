@@ -62,6 +62,11 @@ namespace comercio_web
                     user.UrlImagenPerfil = "perfil-" + user.Id + ".jpg";
                 }
 
+                bool hayError = false;
+
+                hayError |= Validacion.validaTextoVacio(txtNombre, lblErrorNombre, "❗ Debes ingresar tu nombre");
+                hayError |= Validacion.validaTextoVacio(txtApellido, lblErrorApellido, "❗ Debes ingresar tu apellido");
+
                 user.Nombre = txtNombre.Text;
                 user.Apellido = txtApellido.Text;
 
@@ -77,6 +82,7 @@ namespace comercio_web
             {
 
                 Session.Add("error", ex.ToString());
+                Response.Redirect("Error.aspx", false);
             }
         }
     }
