@@ -44,8 +44,8 @@ namespace comercio_web
                 }
                 else
                 {
-                    Session.Add("error", "E-mail o Contraseña incorrectos.");
-                    Response.Redirect("Error.aspx", false);
+                    lblErrorLogin.Text = "❗ E-mail o Contraseña incorrectos.";
+                    lblErrorLogin.Visible = true;
                 }
             }
             catch (System.Threading.ThreadAbortException ex) { }

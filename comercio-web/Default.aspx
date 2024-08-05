@@ -63,6 +63,7 @@
                 <asp:TextBox runat="server" type="password" CssClass="form-control" required ID="txtPassword" placeholder="••••••••••" />
                 <asp:Label runat="server" ID="lblErrorPass" CssClass="text-danger" Visible="false" />
             </div>
+            <asp:Label runat="server" ID="lblErrorLogin" CssClass="text-danger" Visible="false" />
             <p>¿No tienes una cuenta? <a href="Registro.aspx">Regístrate</a></p>
             <asp:Button type="submit" CssClass="btn btn-danger btn-login" Text="Iniciar Sesión" ID="btnLogin" OnClick="btnLogin_Click" runat="server" />
         </div>
