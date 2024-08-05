@@ -43,57 +43,61 @@
         <h2>Formulario de Artículos</h2>
         <p>Completa los datos para crear o modificar el artículo</p>
     </div>
-    <asp:Panel runat="server" ID="pnlFormularioArticulo" DefaultButton="btnAceptar">
-        <div class="row">
-            <div class="col-6">
-                <div class="mb-3">
-                    <label for="txtId" class="form-label">ID</label>
-                    <asp:TextBox runat="server" ID="txtId" CssClass="form-control" />
-                </div>
-                <div class="mb-3">
-                    <label for="txtCodigo" class="form-label">Código</label>
-                    <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control" MaxLength="4" />
-                    <asp:Label runat="server" ID="lblErrorCodigo" CssClass="text-danger" Visible="false" />
-                </div>
-                <div class="mb-3">
-                    <label for="txtNombre" class="form-label">Nombre</label>
-                    <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" MaxLength="70" />
-                    <asp:Label runat="server" ID="lblErrorNombre" CssClass="text-danger" Visible="false" />
-                </div>
-                <div class="mb-3">
-                    <label for="ddlMarca" class="form-label">Marca</label>
-                    <asp:DropDownList runat="server" ID="ddlMarca" CssClass="form-select"></asp:DropDownList>
-                </div>
-                <div class="mb-3">
-                    <label for="ddlCategoria" class="form-label">Categoría</label>
-                    <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-select"></asp:DropDownList>
-                </div>
-                <div>
-                    <label for="txtPrecio" class="form-label">Precio</label>
-                    <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" TextMode="Number" />
-                    <asp:Label runat="server" ID="lblErrorPrecio" CssClass="text-danger" Visible="false" />
-                </div>
-            </div>
-            <div class="col-6">
-                <asp:UpdatePanel runat="server">
-                    <ContentTemplate>
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
+            <asp:Panel runat="server" ID="pnlFormularioArticulo" DefaultButton="btnAceptar">
+                <div class="row">
+                    <div class="col-6">
                         <div class="mb-3">
-                            <label for="txtDescripcion" class="form-label">Descripción</label>
-                            <asp:TextBox runat="server" ID="txtDescripcion" CssClass="form-control textbox-size"
-                                TextMode="MultiLine" MaxLength="150" />
+                            <label for="txtId" class="form-label">ID</label>
+                            <asp:TextBox runat="server" ID="txtId" CssClass="form-control" />
                         </div>
                         <div class="mb-3">
-                            <label for="txtImagenUrl" class="form-label">URL Imagen</label>
-                            <asp:TextBox runat="server" ID="txtImagenUrl" CssClass="form-control"
-                                AutoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged" />
+                            <label for="txtCodigo" class="form-label">Código</label>
+                            <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control" MaxLength="4" />
+                            <asp:Label runat="server" ID="lblErrorCodigo" CssClass="text-danger" Visible="false" />
                         </div>
-                        <asp:Image ImageUrl="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
-                            runat="server" ID="imgArticulo" Width="60%" CssClass="img-limited img-fluid" />
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-            </div>
-        </div>
-    </asp:Panel>
+                        <div class="mb-3">
+                            <label for="txtNombre" class="form-label">Nombre</label>
+                            <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" MaxLength="70" />
+                            <asp:Label runat="server" ID="lblErrorNombre" CssClass="text-danger" Visible="false" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="ddlMarca" class="form-label">Marca</label>
+                            <asp:DropDownList runat="server" ID="ddlMarca" CssClass="form-select"></asp:DropDownList>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ddlCategoria" class="form-label">Categoría</label>
+                            <asp:DropDownList runat="server" ID="ddlCategoria" CssClass="form-select"></asp:DropDownList>
+                        </div>
+                        <div>
+                            <label for="txtPrecio" class="form-label">Precio</label>
+                            <asp:TextBox runat="server" ID="txtPrecio" CssClass="form-control" TextMode="Number" />
+                            <asp:Label runat="server" ID="lblErrorPrecio" CssClass="text-danger" Visible="false" />
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                <div class="mb-3">
+                                    <label for="txtDescripcion" class="form-label">Descripción</label>
+                                    <asp:TextBox runat="server" ID="txtDescripcion" CssClass="form-control textbox-size"
+                                        TextMode="MultiLine" MaxLength="150" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtImagenUrl" class="form-label">URL Imagen</label>
+                                    <asp:TextBox runat="server" ID="txtImagenUrl" CssClass="form-control"
+                                        AutoPostBack="true" OnTextChanged="txtImagenUrl_TextChanged" />
+                                </div>
+                                <asp:Image ImageUrl="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+                                    runat="server" ID="imgArticulo" Width="60%" CssClass="img-limited img-fluid" />
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+            </asp:Panel>
+        </ContentTemplate>
+    </asp:UpdatePanel>
     <div class="row mt-3">
         <div class="col-6">
             <asp:UpdatePanel runat="server">

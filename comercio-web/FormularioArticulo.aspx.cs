@@ -94,9 +94,9 @@ namespace comercio_web
                 hayError |= Validacion.validaTextoVacio(txtNombre, lblErrorNombre, "❗ Debes ingresar un nombre");
                 hayError |= Validacion.validaTextoVacio(txtPrecio, lblErrorPrecio, "❗ Debes ingresar un precio");
 
-                if(!Regex.IsMatch(txtCodigo.Text, @"^[a-zA-Z0-9]{1,4}$"))
+                if(!Regex.IsMatch(txtCodigo.Text, @"^[a-zA-Z0-9]{2,4}$"))
                 {
-                    lblErrorCodigo.Text = "❗ El código debe contener hasta 4 caracteres alfanuméricos";
+                    lblErrorCodigo.Text = "❗ El código debe contener entre 2 y 4 caracteres alfanuméricos";
                     lblErrorCodigo.Visible = true;
                     hayError = true;
 
