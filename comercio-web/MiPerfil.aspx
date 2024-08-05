@@ -19,11 +19,14 @@
                 text-align: left;
             }
 
-            .text-danger {
-                font-weight: bold;
-                font-size: 16px;
-            }
+        .text-danger {
+            font-weight: bold;
+            font-size: 16px;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="perfil-header">

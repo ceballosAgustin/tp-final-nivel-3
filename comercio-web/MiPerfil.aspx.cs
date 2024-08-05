@@ -67,6 +67,11 @@ namespace comercio_web
                 hayError |= Validacion.validaTextoVacio(txtNombre, lblErrorNombre, "❗ Debes ingresar tu nombre");
                 hayError |= Validacion.validaTextoVacio(txtApellido, lblErrorApellido, "❗ Debes ingresar tu apellido");
 
+                if (hayError)
+                {
+                    return;
+                }
+
                 user.Nombre = txtNombre.Text;
                 user.Apellido = txtApellido.Text;
 
@@ -75,6 +80,7 @@ namespace comercio_web
 
                 Image img = (Image)Master.FindControl("imgAvatar");
                 img.ImageUrl = "~/ProfileImages/" + user.UrlImagenPerfil + "?t=" + DateTime.Now.Ticks.ToString();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "toastr.success('Tus datos han sido guardados exitosamente.', '¡Excelente!', {timeOut: 3000});", true);
 
                 // Response.Redirect("Articulos.aspx");
             }
