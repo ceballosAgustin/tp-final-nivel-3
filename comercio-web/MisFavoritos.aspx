@@ -28,6 +28,10 @@
                 color: #444;
                 text-align: left;
             }
+
+        .btn-favorito {
+            margin-left: 30px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -47,8 +51,12 @@
                                 <h5 class="card-title"><%#Eval("Nombre") %></h5>
                                 <p class="card-text">Precio: $<%# string.Format("{0:N2}", Eval("Precio")) %></p>
                                 <p class="card-text"><%#Eval("Descripcion") %></p>
-                                <asp:Button Text="Eliminar de Favoritos" ID="btnEliminar" runat="server" CssClass="btn btn-danger"
-                                    CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnEliminar_Click" />
+                                <div class="d-flex justify-content-between">
+                                    <asp:Button Text="Ver Detalle" ID="btnDetalle" runat="server" CssClass="btn btn-dark"
+                                        CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnDetalle_Click" />
+                                    <asp:Button Text="Eliminar de Favoritos" ID="btnEliminar" runat="server" CssClass="btn btn-danger btn-favorito"
+                                        CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnEliminar_Click" />
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -40,10 +40,16 @@ namespace comercio_web
             Button btnEliminar = (Button)sender;
             int idArticulo = int.Parse(btnEliminar.CommandArgument);
             User user = (User)(Session["user"]);
-            
+
             FavoritoNegocio negocio = new FavoritoNegocio();
             negocio.eliminar(user, idArticulo);
             Response.Redirect("MisFavoritos.aspx", false);
+        }
+
+        protected void btnDetalle_Click(object sender, EventArgs e)
+        {
+            string id = ((Button)sender).CommandArgument;
+            Response.Redirect("DetalleArticulo.aspx?id=" + id);
         }
     }
 }

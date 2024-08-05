@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using dominio;
+using System.Globalization;
 
 namespace comercio_web
 {
@@ -27,7 +28,7 @@ namespace comercio_web
                     txtDescripcion.Text = seleccionado.Descripcion;
                     txtMarca.Text = seleccionado.Marca.Descripcion;
                     txtCategoria.Text = seleccionado.Categoria.Descripcion;
-                    txtPrecio.Text = seleccionado.Precio.ToString();
+                    txtPrecio.Text = seleccionado.Precio.ToString("N2", CultureInfo.InvariantCulture);
                     imgArticulo.ImageUrl = seleccionado.ImagenUrl;
                     imgArticulo.DataBind();
 
