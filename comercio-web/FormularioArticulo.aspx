@@ -52,12 +52,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="txtCodigo" class="form-label">Código</label>
-                    <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtCodigo" CssClass="form-control" MaxLength="4" />
                     <asp:Label runat="server" ID="lblErrorCodigo" CssClass="text-danger" Visible="false" />
                 </div>
                 <div class="mb-3">
                     <label for="txtNombre" class="form-label">Nombre</label>
-                    <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" />
+                    <asp:TextBox runat="server" ID="txtNombre" CssClass="form-control" MaxLength="70" />
                     <asp:Label runat="server" ID="lblErrorNombre" CssClass="text-danger" Visible="false" />
                 </div>
                 <div class="mb-3">
@@ -80,7 +80,7 @@
                         <div class="mb-3">
                             <label for="txtDescripcion" class="form-label">Descripción</label>
                             <asp:TextBox runat="server" ID="txtDescripcion" CssClass="form-control textbox-size"
-                                TextMode="MultiLine" />
+                                TextMode="MultiLine" MaxLength="150" />
                         </div>
                         <div class="mb-3">
                             <label for="txtImagenUrl" class="form-label">URL Imagen</label>

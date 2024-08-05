@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using dominio;
+using System.Text.RegularExpressions;
 
 namespace comercio_web
 {
@@ -93,6 +94,22 @@ namespace comercio_web
                 hayError |= Validacion.validaTextoVacio(txtNombre, lblErrorNombre, "❗ Debes ingresar un nombre");
                 hayError |= Validacion.validaTextoVacio(txtPrecio, lblErrorPrecio, "❗ Debes ingresar un precio");
 
+                if(!Regex.IsMatch(txtCodigo.Text, @"^[a-zA-Z0-9]{1,4}$"))
+                {
+                    lblErrorCodigo.Text = "❗ El código debe contener hasta 4 caracteres alfanuméricos";
+                    lblErrorCodigo.Visible = true;
+                    hayError = true;
+
+                }
+
+                if(!Regex.IsMatch(txtPrecio.Text, @"^\d+(\.\d{1,2})?$"))
+                {
+                    lblErrorPrecio.Text = "❗ El precio debe ser un número válido";
+                    lblErrorPrecio.Visible = true;
+                    hayError = true;
+                }
+
+                
                 if (hayError)
                 {
                     return;
