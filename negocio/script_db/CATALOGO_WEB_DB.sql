@@ -90,4 +90,3 @@ insert into ARTICULOS values ('S01', 'Galaxy S10', 'Una canoa cara', 1, 1, 'http
 ('A23', 'Apple TV', 'lindo loro', 2, 3, 'https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/rfb-apple-tv-4k?wid=1144&hei=1144&fmt=jpeg&qlt=80&.v=1513897159574', 7850)
 insert into USERS (email, pass, admin) values ('admin@admin.com', 'admin', 1)
 insert into USERS (email, pass, admin) values ('user@user.com', 'user', 0)
-select * from ARTICULOS
