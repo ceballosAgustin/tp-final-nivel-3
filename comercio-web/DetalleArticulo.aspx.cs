@@ -51,7 +51,16 @@ namespace comercio_web
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Articulos.aspx");
+            string paginaAnterior = Request.QueryString["from"];
+
+            if (!string.IsNullOrEmpty(paginaAnterior))
+            {
+                Response.Redirect(paginaAnterior + ".aspx");
+            }
+            else
+            {
+                Response.Redirect("Articulos.aspx");
+            }
         }
 
     }
