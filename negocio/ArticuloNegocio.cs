@@ -294,7 +294,7 @@ namespace negocio
                     }
                 }
 
-                else if (campo == "Categoria")
+                else if (campo == "Categoría")
                 {
                     switch (criterio)
                     {

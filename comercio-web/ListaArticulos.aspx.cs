@@ -129,7 +129,7 @@ namespace comercio_web
                 {
                     ddlCriterio.Items.Add("Contiene");
                     ddlCriterio.Items.Add("Comienza con");
-                    ddlCriterio.Items.Add("Termina");
+                    ddlCriterio.Items.Add("Termina con");
                 }
             }
         }

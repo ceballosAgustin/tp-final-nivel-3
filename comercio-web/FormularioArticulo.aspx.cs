@@ -61,7 +61,7 @@ namespace comercio_web
                     txtNombre.Text = seleccionado.Nombre;
                     txtDescripcion.Text = seleccionado.Descripcion;
                     txtImagenUrl.Text = seleccionado.ImagenUrl;
-                    txtPrecio.Text = seleccionado.Precio.ToString();
+                    txtPrecio.Text = seleccionado.Precio.ToString("F2");
                     ddlMarca.SelectedValue = seleccionado.Marca.Id.ToString();
                     ddlCategoria.SelectedValue = seleccionado.Categoria.Id.ToString();
 
@@ -107,6 +107,10 @@ namespace comercio_web
                     lblErrorPrecio.Text = "❗ El precio debe ser un número válido";
                     lblErrorPrecio.Visible = true;
                     hayError = true;
+                }
+                else
+                {
+                    nuevo.Precio = decimal.Parse(txtPrecio.Text);
                 }
 
                 
